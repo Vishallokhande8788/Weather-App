@@ -37,28 +37,29 @@
             </li>
           </ul>
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input class="form-control me-2" id="city" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" id="submit" type="submit">Search</button>
           </form>
         </div>
       </div>
     </nav>
 
     <div class="container">
+      <h1 class="my-4 text-center">Weather for <span id="cityName"></span> </h1>
       <main>
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
           <div class="col">
             <div class="card mb-4 rounded-3 shadow-sm">
               <div class="card-header py-3">
-                <h4 class="my-0 fw-normal">Free</h4>
+                <h4 class="my-0 fw-normal">Temperatures</h4>
               </div>
               <div class="card-body">
-                <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1>
+                <h1 class="card-title pricing-card-title"><span id="temp2"></span><small class="text-body-secondary fw-light">
+                  </small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
-                  <li>10 users included</li>
-                  <li>2 GB of storage</li>
-                  <li>Email support</li>
-                  <li>Help center access</li>
+                  <li> Temperature is  <span id="temp"></span></li>
+                  <li>Min Temperature is <span id="min_Temp"></span></li>
+                  <li> Max Temperature is <span id="max_Temp"></span></li>
                 </ul>
                 <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
               </div>
@@ -67,15 +68,18 @@
           <div class="col">
             <div class="card mb-4 rounded-3 shadow-sm">
               <div class="card-header py-3">
-                <h4 class="my-0 fw-normal">Pro</h4>
+                <h4 class="my-0 fw-normal">Wind Degree </h4>
               </div>
               <div class="card-body">
-                <h1 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/mo</small></h1>
+                <h1 class="card-title pricing-card-title"><span id="wind_degrees2"></span><small class="text-body-secondary fw-light"></small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
-                  <li>20 users included</li>
-                  <li>10 GB of storage</li>
-                  <li>Priority email support</li>
-                  <li>Help center access</li>
+                  <!-- <li> Cloud pct is <span id="cloud_pct"></span></li> -->
+                  <li> Wind Degree is  <span id="wind_degrees"></span></li>
+
+                  <li> Feels Like  <span id="feels_like"></span></li>
+                  <li> Humidity is <span id="humidity"></span></li>
+
+
                 </ul>
                 <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
               </div>
@@ -84,15 +88,14 @@
           <div class="col">
             <div class="card mb-4 rounded-3 shadow-sm border-primary">
               <div class="card-header py-3 text-bg-primary border-primary">
-                <h4 class="my-0 fw-normal">Enterprise</h4>
+                <h4 class="my-0 fw-normal">Wind Speed info </h4>
               </div>
               <div class="card-body">
-                <h1 class="card-title pricing-card-title">$29<small class="text-body-secondary fw-light">/mo</small></h1>
+                <h1 class="card-title pricing-card-title"><span id="wind_speed2"></span><small class="text-body-secondary fw-light"></small></h1> 
                 <ul class="list-unstyled mt-3 mb-4">
-                  <li>30 users included</li>
-                  <li>15 GB of storage</li>
-                  <li>Phone and email support</li>
-                  <li>Help center access</li>
+                  <li> Wind Speed <span id="wind_speed"></span></li>
+                  <li> Sunup time <span id="Sunrise"></span></li>
+                  <li> Sunset time <span id="Sunset"></span></li>
                 </ul>
                 <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
               </div>
@@ -106,51 +109,77 @@
           <table class="table text-center">
             <thead>
               <tr>
-                <th style="width: 34%;"></th>
-                <th style="width: 22%;">Free</th>
-                <th style="width: 22%;">Pro</th>
-                <th style="width: 22%;">Enterprise</th>
+                <th style="width: 4%;">City</th>
+                
+                    <th style="width: 22%;">Cloud_Pct</th>
+                   <th style="width: 22%;">Feels_Like</th>
+                   <th style="width: 22%;">Humidity</th>
+                   <th style="width: 22%;">Max_Temp</th>
+                   <th style="width: 22%;">Min_Temp</th>
+                   <th style="width: 22%;">Sunrise</th>
+                   <th style="width: 22%;">Sunset</th>
+                   <th style="width: 22%;">Temp</th>
+                   <th style="width: 22%;">Wind_Degrees</th>
+                   <th style="width: 22%;">Wind_Speed</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row" class="text-start">Shanghai</th>
-                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
-                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
-                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                <th scope="row" class="text-start">Mumbai</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>  
+                <td>10</td>
               </tr>
               <tr>
-                <th scope="row" class="text-start">Boston</th>
-                <td></td>
-                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
-                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                <th scope="row" class="text-start">Delhi</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>  
+                <td>10</td>
               </tr>
             </tbody>
     
             <tbody>
               <tr>
-                <th scope="row" class="text-start">Lucknow</th>
-                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
-                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
-                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                <th scope="row" class="text-start">New York</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>  
+                <td>10</td>
               </tr>
               <tr>
-                <th scope="row" class="text-start">Kolkata </th>
-                <td></td>
-                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
-                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                <th scope="row" class="text-start">London</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>  
+                <td>10</td>
               </tr>
-              <tr>
-                <th scope="row" class="text-start">Unlimited members</th>
-                <td></td>
-                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
-                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-start">Extra security</th>
-                <td></td>
-                <td></td>
-                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+             
               </tr>
             </tbody>
           </table>
