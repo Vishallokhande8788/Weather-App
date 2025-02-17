@@ -129,7 +129,8 @@ if (localStorage.getItem("darkMode") === "enabled") {
     document.body.classList.add("dark-mode");
 }
 
-darkModeToggle.addEventListener("click", () => {
+darkModeToggle.addEventListener("click", (e) => {
+    e.preventDefault();
     document.body.classList.toggle("dark-mode");
 
     // Save Dark Mode state in localStorage
